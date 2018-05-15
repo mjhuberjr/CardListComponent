@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		5EF61E2520AA7F8300E0371E /* CardListComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF61E2320AA7F8300E0371E /* CardListComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EF61E2E20AA80D400E0371E /* CardListClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E2D20AA80D400E0371E /* CardListClosures.swift */; };
+		5EF61E3020AA812700E0371E /* CardListInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E2F20AA812700E0371E /* CardListInteraction.swift */; };
+		5EF61E3220AA813300E0371E /* CardListEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E3120AA813300E0371E /* CardListEvents.swift */; };
+		5EF61E3420AA81CD00E0371E /* CardListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E3320AA81CD00E0371E /* CardListDataSource.swift */; };
+		5EF61E3620AA81E800E0371E /* CardListConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E3520AA81E800E0371E /* CardListConfigurable.swift */; };
+		5EF61E3820AA820100E0371E /* CardListFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E3720AA820100E0371E /* CardListFormattable.swift */; };
+		5EF61E3D20AA84A900E0371E /* CardListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E3C20AA84A900E0371E /* CardListCoordinator.swift */; };
+		5EF61E3F20AA84B200E0371E /* CardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E3E20AA84B200E0371E /* CardListPresenter.swift */; };
+		5EF61E4120AA84BA00E0371E /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E4020AA84BA00E0371E /* CardListViewController.swift */; };
+		5EF61E4320AA84C400E0371E /* CardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF61E4220AA84C400E0371E /* CardListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5EF61E2020AA7F8300E0371E /* CardListComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardListComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF61E2320AA7F8300E0371E /* CardListComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardListComponent.h; sourceTree = "<group>"; };
 		5EF61E2420AA7F8300E0371E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF61E2D20AA80D400E0371E /* CardListClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListClosures.swift; sourceTree = "<group>"; };
+		5EF61E2F20AA812700E0371E /* CardListInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListInteraction.swift; sourceTree = "<group>"; };
+		5EF61E3120AA813300E0371E /* CardListEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListEvents.swift; sourceTree = "<group>"; };
+		5EF61E3320AA81CD00E0371E /* CardListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDataSource.swift; sourceTree = "<group>"; };
+		5EF61E3520AA81E800E0371E /* CardListConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListConfigurable.swift; sourceTree = "<group>"; };
+		5EF61E3720AA820100E0371E /* CardListFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListFormattable.swift; sourceTree = "<group>"; };
+		5EF61E3C20AA84A900E0371E /* CardListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCoordinator.swift; sourceTree = "<group>"; };
+		5EF61E3E20AA84B200E0371E /* CardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListPresenter.swift; sourceTree = "<group>"; };
+		5EF61E4020AA84BA00E0371E /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
+		5EF61E4220AA84C400E0371E /* CardListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +76,50 @@
 		5EF61E2B20AA7FB400E0371E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5EF61E2C20AA80B800E0371E /* CardListTypes */,
+				5EF61E3920AA83D600E0371E /* Root */,
+				5EF61E3A20AA841C00E0371E /* Extensions */,
+				5EF61E3B20AA843900E0371E /* Views */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		5EF61E2C20AA80B800E0371E /* CardListTypes */ = {
+			isa = PBXGroup;
+			children = (
+				5EF61E2D20AA80D400E0371E /* CardListClosures.swift */,
+				5EF61E2F20AA812700E0371E /* CardListInteraction.swift */,
+				5EF61E3120AA813300E0371E /* CardListEvents.swift */,
+				5EF61E3320AA81CD00E0371E /* CardListDataSource.swift */,
+				5EF61E3720AA820100E0371E /* CardListFormattable.swift */,
+				5EF61E3520AA81E800E0371E /* CardListConfigurable.swift */,
+			);
+			path = CardListTypes;
+			sourceTree = "<group>";
+		};
+		5EF61E3920AA83D600E0371E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				5EF61E3C20AA84A900E0371E /* CardListCoordinator.swift */,
+				5EF61E3E20AA84B200E0371E /* CardListPresenter.swift */,
+				5EF61E4020AA84BA00E0371E /* CardListViewController.swift */,
+				5EF61E4220AA84C400E0371E /* CardListViewController.xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		5EF61E3A20AA841C00E0371E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5EF61E3B20AA843900E0371E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +165,7 @@
 				TargetAttributes = {
 					5EF61E1F20AA7F8300E0371E = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -128,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF61E4320AA84C400E0371E /* CardListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF61E3F20AA84B200E0371E /* CardListPresenter.swift in Sources */,
+				5EF61E3420AA81CD00E0371E /* CardListDataSource.swift in Sources */,
+				5EF61E3820AA820100E0371E /* CardListFormattable.swift in Sources */,
+				5EF61E3020AA812700E0371E /* CardListInteraction.swift in Sources */,
+				5EF61E3D20AA84A900E0371E /* CardListCoordinator.swift in Sources */,
+				5EF61E2E20AA80D400E0371E /* CardListClosures.swift in Sources */,
+				5EF61E4120AA84BA00E0371E /* CardListViewController.swift in Sources */,
+				5EF61E3220AA813300E0371E /* CardListEvents.swift in Sources */,
+				5EF61E3620AA81E800E0371E /* CardListConfigurable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +340,7 @@
 		5EF61E2920AA7F8300E0371E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -284,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.op131.CardListComponent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,6 +367,7 @@
 		5EF61E2A20AA7F8300E0371E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
