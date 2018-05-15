@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+public typealias CardIdentifier = String
+public typealias CardListEventClosure = (CardIdentifier) -> Void

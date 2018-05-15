@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+public enum CardListDirection {
+    case vertical
+    case horizontal
+}
+
+class CardListEventsImpl: CardListEvents { init() { } }
+
+public protocol CardListConfigurable {
+    
+    var cardListEvents: CardListEvents { get }
+    var type: CardListDirection { get }
+    
+}
+
+extension CardListConfigurable {
+    
+    var cardListEvents: CardListEvents { return CardListEventsImpl() }
+    var type: CardListDirection { return .vertical }
+    
+}

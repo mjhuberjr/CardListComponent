@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+public protocol CardListEvents: class {
+    
+    var cardSelected: CardListEventClosure? { get }
+    
+}
+
+extension CardListEvents {
+    
+    var cardSelected: CardListEventClosure? { return nil }
+    
+}

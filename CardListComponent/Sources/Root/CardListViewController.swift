@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+class CardListViewController: UIViewController {
+    
+    private var presenter: CardListComponentPresentation
+    
+    init(presenter: CardListComponentPresentation) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil, bundle: Bundle(for: CardListViewController.self))
+    }
+    
+    @available(*, unavailable)
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
