@@ -19,6 +19,8 @@ public protocol CardListDataObject {
     var id: String { get }
     var title: String? { get }
     var subtitle: String? { get }
+    var description: String? { get }
+    var thumbnail: UIImage? { get }
     
 }
 

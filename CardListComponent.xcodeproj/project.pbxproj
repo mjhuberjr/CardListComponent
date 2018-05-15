@@ -18,6 +18,10 @@
 		5EF61E3F20AA84B200E0371E /* CardListComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E3E20AA84B200E0371E /* CardListComponentPresenter.swift */; };
 		5EF61E4120AA84BA00E0371E /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E4020AA84BA00E0371E /* CardListViewController.swift */; };
 		5EF61E4320AA84C400E0371E /* CardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF61E4220AA84C400E0371E /* CardListViewController.xib */; };
+		5EF61E4620AA944700E0371E /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E4520AA944700E0371E /* CardCell.swift */; };
+		5EF61E4820AA961700E0371E /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF61E4720AA961700E0371E /* CardCell.xib */; };
+		5EF61E4A20AA989700E0371E /* CardListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E4920AA989700E0371E /* CardListCollectionView.swift */; };
+		5EF61E4C20AA98BF00E0371E /* CardListCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF61E4B20AA98BF00E0371E /* CardListCollectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		5EF61E3E20AA84B200E0371E /* CardListComponentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListComponentPresenter.swift; sourceTree = "<group>"; };
 		5EF61E4020AA84BA00E0371E /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		5EF61E4220AA84C400E0371E /* CardListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListViewController.xib; sourceTree = "<group>"; };
+		5EF61E4520AA944700E0371E /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		5EF61E4720AA961700E0371E /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		5EF61E4920AA989700E0371E /* CardListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCollectionView.swift; sourceTree = "<group>"; };
+		5EF61E4B20AA98BF00E0371E /* CardListCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListCollectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +126,20 @@
 		5EF61E3B20AA843900E0371E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5EF61E4420AA941D00E0371E /* Cells */,
+				5EF61E4920AA989700E0371E /* CardListCollectionView.swift */,
+				5EF61E4B20AA98BF00E0371E /* CardListCollectionView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5EF61E4420AA941D00E0371E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5EF61E4520AA944700E0371E /* CardCell.swift */,
+				5EF61E4720AA961700E0371E /* CardCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF61E4320AA84C400E0371E /* CardListViewController.xib in Resources */,
+				5EF61E4820AA961700E0371E /* CardCell.xib in Resources */,
+				5EF61E4C20AA98BF00E0371E /* CardListCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,9 +226,11 @@
 			files = (
 				5EF61E3F20AA84B200E0371E /* CardListComponentPresenter.swift in Sources */,
 				5EF61E3420AA81CD00E0371E /* CardListDataSource.swift in Sources */,
+				5EF61E4A20AA989700E0371E /* CardListCollectionView.swift in Sources */,
 				5EF61E3820AA820100E0371E /* CardListDataFormattable.swift in Sources */,
 				5EF61E3020AA812700E0371E /* CardListInteraction.swift in Sources */,
 				5EF61E3D20AA84A900E0371E /* CardListComponentCoordinator.swift in Sources */,
+				5EF61E4620AA944700E0371E /* CardCell.swift in Sources */,
 				5EF61E2E20AA80D400E0371E /* CardListClosures.swift in Sources */,
 				5EF61E4120AA84BA00E0371E /* CardListViewController.swift in Sources */,
 				5EF61E3220AA813300E0371E /* CardListEvents.swift in Sources */,
