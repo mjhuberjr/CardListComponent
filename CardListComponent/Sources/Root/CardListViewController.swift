@@ -38,7 +38,12 @@ class CardListViewController: UIViewController {
 private extension CardListViewController {
     
     func setupCollectionView() {
-        
+        let dataSource = presenter.dataSource
+        let cardListSections = CardListSections(dataSource: dataSource)
+        let collectionDataSource = CardListCollectionViewDataSource(presenter: presenter, cardListSections: cardListSections)
+        let collectionDelegate = CardListCollectionViewDelegate()
+        let collectionViewController = CardListCollectionView(dataSource: collectionDataSource, delegate: collectionDelegate)
+        embed(collectionViewController)
     }
     
 }
