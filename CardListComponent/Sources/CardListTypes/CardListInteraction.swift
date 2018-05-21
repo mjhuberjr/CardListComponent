@@ -28,6 +28,16 @@ class CardListInteractor {
 
 extension CardListInteractor: CardListInteraction {
     
+    private func getDirection() -> UICollectionViewScrollPosition {
+        let direction = presenter.configuration.type
+        switch direction {
+        case .horizontal:
+            return .left
+        case .vertical:
+            return .top
+        }
+    }
+    
     func focus(on identifier: CardIdentifier) {
         let data = presenter.dataSource.data
         var object: CardListDataObject?
@@ -44,7 +54,16 @@ extension CardListInteractor: CardListInteraction {
         presenter.selectedObject = object
         
         let indexPath = IndexPath(row: index, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+        let direction = getDirection()
+        collectionView.scrollToItem(at: indexPath, at: direction, animated: true)
+    }
+    
+    func deselect() {
+        presenter.selectedObject = nil
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        let direction = getDirection()
+        collectionView.scrollToItem(at: indexPath, at: direction, animated: true)
     }
     
 }
