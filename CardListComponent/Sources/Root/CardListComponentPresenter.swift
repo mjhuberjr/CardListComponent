@@ -14,6 +14,8 @@ protocol CardListComponentPresentation: class {
     var dataFormatter: CardListDataFormattable { get }
     var configuration: CardListConfigurable { get }
     
+    var selectedObject: CardListDataObject? { get set }
+    
 }
 
 class CardListPresenter: CardListComponentPresentation {
@@ -21,6 +23,8 @@ class CardListPresenter: CardListComponentPresentation {
     var dataSource: CardListDataSource
     var dataFormatter: CardListDataFormattable
     var configuration: CardListConfigurable
+    
+    var selectedObject: CardListDataObject?
     
     init(dataSource: CardListDataSource, dataFormatter: CardListDataFormattable, configuration: CardListConfigurable) {
         self.dataSource = dataSource

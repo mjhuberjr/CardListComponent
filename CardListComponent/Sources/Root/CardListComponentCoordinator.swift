@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+public protocol CardListComponentCoordination: class {
+    
+    func cardListComponentViewController() -> UIViewController
+    
+}
+
+// MARK: - Default implementations if not passed in from consumer of CardListComponent
+
+class CardListFormattableImpl: CardListDataFormattable { init() { } }
+class CardListConfigurableImpl: CardListConfigurable { init() { } }
+
+public class CardListComponentCoordinator: CardListComponentCoordination {
+    
+    fileprivate let rootViewController: CardListViewController
+    
+    public init(dataSource: CardListDataSource?, dataFormattable: CardListDataFormattable? = nil, cardListConfigurable: CardListConfigurable? = nil, cardListEvents: CardListEvents? = nil) {
+        let dataFormatter = dataFormattable ?? CardListFormattableImpl()
+        let cardListConfiguration = cardListConfigurable ?? CardListConfigurableImpl()
+        let dataSource = dataSource ?? PrototypeData()
+        let presenter = CardListPresenter(dataSource: dataSource, dataFormatter: dataFormatter, configuration: cardListConfiguration)
+        rootViewController = CardListViewController(presenter: presenter)
+    }
+    
+    public func cardListComponentViewController() -> UIViewController {
+        return rootViewController
+    }
+    
+}
