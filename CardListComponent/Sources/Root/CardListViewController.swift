@@ -11,6 +11,8 @@ import Foundation
 class CardListViewController: UIViewController {
     
     private var presenter: CardListComponentPresentation
+    var interactor: CardListInteraction!
+    var collectionViewController: CardListCollectionView!
     
     init(presenter: CardListComponentPresentation) {
         self.presenter = presenter
@@ -29,6 +31,7 @@ class CardListViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        setupInteractor()
     }
     
 }
@@ -42,8 +45,14 @@ private extension CardListViewController {
         let cardListSections = CardListSections(dataSource: dataSource)
         let collectionDataSource = CardListCollectionViewDataSource(presenter: presenter, cardListSections: cardListSections)
         let collectionDelegate = CardListCollectionViewDelegate()
-        let collectionViewController = CardListCollectionView(dataSource: collectionDataSource, delegate: collectionDelegate)
+        collectionViewController = CardListCollectionView(dataSource: collectionDataSource, delegate: collectionDelegate)
         embed(collectionViewController)
+    }
+    
+    func setupInteractor() {
+        guard let collectionView = collectionViewController.collectionView else { fatalError("No collectionView set, something is seriously wrong") }
+        let interactor = CardListInteractor(presenter: presenter, collectionView: collectionView)
+        self.interactor = interactor
     }
     
 }
