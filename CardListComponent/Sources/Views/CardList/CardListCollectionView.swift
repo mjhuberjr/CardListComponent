@@ -32,9 +32,9 @@ class CardListCollectionView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = dataSource
-        collectionView.delegate = delegate
+        view.backgroundColor = .clear
         
+        setupCollectionView()
         registerCells()
     }
     
@@ -43,6 +43,13 @@ class CardListCollectionView: UIViewController {
 // MARK: - Private methods
 
 private extension CardListCollectionView {
+    
+    func setupCollectionView() {
+        collectionView.backgroundColor = .clear
+        
+        collectionView.dataSource = dataSource
+        collectionView.delegate = delegate
+    }
     
     func registerCells() {
         let nib = UINib(nibName: "CardCell", bundle: Bundle(for: CardCell.self))
