@@ -14,6 +14,7 @@ class CardCell: UICollectionViewCell {
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var thumbnail: UIImageView!
+    @IBOutlet var content: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +32,10 @@ class CardCell: UICollectionViewCell {
         titleLabel.text = data.title
         subtitleLabel.text = data.subtitle
         descriptionLabel.text = data.description
-        thumbnail.image = data.thumbnail
+        
+        let bundle = Bundle(for: CardCell.self)
+        let image = data.thumbnail ?? UIImage(named: "noPhoto", in: bundle, compatibleWith: nil)
+        thumbnail.image = image
     }
     
 }
@@ -41,7 +45,7 @@ class CardCell: UICollectionViewCell {
 private extension CardCell {
     
     func setup() {
-        thumbnail.layer.cornerRadius = 2.0
+        thumbnail.layer.cornerRadius = 4.0
     }
     
 }

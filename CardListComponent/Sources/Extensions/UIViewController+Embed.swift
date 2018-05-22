@@ -10,17 +10,17 @@ import Foundation
 
 extension UIViewController {
     
-    func embed(_ vc: UIViewController) {
+    func embed(_ vc: UIViewController, with padding: UIEdgeInsets) {
         addChildViewController(vc)
         vc.didMove(toParentViewController: self)
         vc.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(vc.view)
         
-        pinConstraints(vc.view)
+        pinConstraints(vc.view, with: padding)
     }
     
-    private func pinConstraints(_ view: UIView) {
-        view.pinToEdges(of: self.view)
+    private func pinConstraints(_ view: UIView, with padding: UIEdgeInsets) {
+        view.pinToEdges(of: self.view, with: padding)
     }
     
 }

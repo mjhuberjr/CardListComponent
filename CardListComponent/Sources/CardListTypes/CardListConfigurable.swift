@@ -19,6 +19,7 @@ public protocol CardListConfigurable {
     
     var cardListEvents: CardListEvents { get }
     var type: CardListDirection { get }
+    var padding: UIEdgeInsets { get }
     
 }
 
@@ -26,5 +27,6 @@ extension CardListConfigurable {
     
     var cardListEvents: CardListEvents { return CardListEventsImpl() }
     var type: CardListDirection { return .vertical }
+    var padding: UIEdgeInsets { return UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0) }
     
 }
