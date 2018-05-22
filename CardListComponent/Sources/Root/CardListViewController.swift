@@ -30,6 +30,8 @@ class CardListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .clear
+        
         setupCollectionView()
         setupInteractor()
     }
