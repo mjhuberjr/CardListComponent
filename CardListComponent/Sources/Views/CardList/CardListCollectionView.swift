@@ -34,7 +34,19 @@ class CardListCollectionView: UIViewController {
         
         collectionView.dataSource = dataSource
         collectionView.delegate = delegate
-        collectionView.register(CardCell.self, forCellWithReuseIdentifier: "CardCell")
+        
+        registerCells()
+    }
+    
+}
+
+// MARK: - Private methods
+
+private extension CardListCollectionView {
+    
+    func registerCells() {
+        let nib = UINib(nibName: "CardCell", bundle: Bundle(for: CardCell.self))
+        collectionView.register(nib, forCellWithReuseIdentifier: "CardCell")
     }
     
 }

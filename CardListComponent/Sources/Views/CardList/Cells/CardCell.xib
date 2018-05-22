@@ -57,10 +57,10 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="descriptionLabel" destination="ZOk-NM-nhI" id="Kso-MH-cTw"/>
-                <outlet property="subtitleLabel" destination="QjL-56-WZb" id="cQd-Wc-VTG"/>
-                <outlet property="thumbnail" destination="zDn-GD-1W8" id="eqe-7X-7LD"/>
-                <outlet property="titleLabel" destination="XER-8A-4uY" id="a9V-KN-03D"/>
+                <outlet property="descriptionLabel" destination="ZOk-NM-nhI" id="huM-qf-RCi"/>
+                <outlet property="subtitleLabel" destination="QjL-56-WZb" id="QL0-IZ-jt0"/>
+                <outlet property="thumbnail" destination="zDn-GD-1W8" id="fzN-Rb-Gdj"/>
+                <outlet property="titleLabel" destination="XER-8A-4uY" id="mG2-6E-fNL"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="-90.5"/>
         </view>

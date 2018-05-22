@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardListCollectionView" customModule="CardListComponent" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="uU7-PW-BPI" id="DdG-wM-taa"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ho8-k7-H8X"/>
             </connections>
         </placeholder>
