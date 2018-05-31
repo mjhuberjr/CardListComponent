@@ -23,7 +23,7 @@ class CardListCollectionViewDataSource: NSObject {
 extension CardListCollectionViewDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.dataSource.data.count
+        return presenter.dataSource.cardListDataObjects.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
