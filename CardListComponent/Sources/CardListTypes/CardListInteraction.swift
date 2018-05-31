@@ -39,7 +39,7 @@ extension CardListInteractor: CardListInteraction {
     }
     
     func focus(on identifier: CardIdentifier) {
-        let data = presenter.dataSource.data
+        let data = presenter.dataSource.cardListDataObjects
         var object: CardListDataObject?
         var index = -1
         // Have to find the index of the dataSource because a protocol cannot currently conform to Equatable and still use polymorphism.

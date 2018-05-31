@@ -10,7 +10,7 @@ import Foundation
 
 public protocol CardListDataSource {
     
-    var data: [CardListDataObject] { get }
+    var cardListDataObjects: [CardListDataObject] { get }
     
 }
 
@@ -26,7 +26,7 @@ public protocol CardListDataObject {
 
 class PrototypeData: CardListDataSource {
     
-    var data: [CardListDataObject]
+    var cardListDataObjects: [CardListDataObject]
     
     struct PrototypeObject: CardListDataObject {
         var id: String
@@ -49,7 +49,7 @@ class PrototypeData: CardListDataSource {
         let object2 = PrototypeObject(id: "2", title: "2700", subtitle: "456 E. Main Street, Somewhere, UT", description: "4 bed • 2 bath • 1,945 sqft")
         let object3 = PrototypeObject(id: "3", title: "3500", subtitle: "789 E. Main Street, Somewhere, UT", description: "2 bed • 2 bath • 3,675 sqft")
         let object4 = PrototypeObject(id: "4", title: "3700", subtitle: "147 E. Main Street, Somewhere, UT", description: "5 bed • 2 bath • 2,675 sqft")
-        data = [object1, object2, object3, object4]
+        cardListDataObjects = [object1, object2, object3, object4]
     }
     
 }

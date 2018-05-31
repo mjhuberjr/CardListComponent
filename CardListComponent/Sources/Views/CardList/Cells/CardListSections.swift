@@ -40,7 +40,7 @@ struct CardListSections {
         
         func rows(dataSource: CardListDataSource) -> [Row] {
             var rows: [Row] = []
-            for object in dataSource.data {
+            for object in dataSource.cardListDataObjects {
                 rows.append(.property(object))
             }
             return rows
