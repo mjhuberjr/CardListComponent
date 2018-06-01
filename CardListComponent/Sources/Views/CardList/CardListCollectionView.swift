@@ -12,14 +12,18 @@ class CardListCollectionView: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    fileprivate var dataSource: CardListCollectionViewDataSource
-    fileprivate var delegate: CardListCollectionViewDelegate
+    fileprivate var dataSource: CardListCollectionViewDataSource!
+    fileprivate var delegate: CardListCollectionViewDelegate!
     
-    init(dataSource: CardListCollectionViewDataSource, delegate: CardListCollectionViewDelegate) {
+    init() {
+        super.init(nibName: nil, bundle: Bundle(for: CardListCollectionView.self))
+    }
+    
+    func provide(dataSource: CardListCollectionViewDataSource, delegate: CardListCollectionViewDelegate) {
         self.dataSource = dataSource
         self.delegate = delegate
         
-        super.init(nibName: nil, bundle: Bundle(for: CardListCollectionView.self))
+        setupCollectionView()
     }
     
     @available(*, unavailable)
@@ -34,7 +38,6 @@ class CardListCollectionView: UIViewController {
         
         view.backgroundColor = .clear
         
-        setupCollectionView()
         registerCells()
     }
     

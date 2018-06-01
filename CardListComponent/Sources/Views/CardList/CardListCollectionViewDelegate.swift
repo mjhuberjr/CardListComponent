@@ -19,6 +19,8 @@ class CardListCollectionViewDelegate: NSObject, CardListEvents {
         
         let cardListEvents = cardListConfiguration.cardListEvents
         self.cardSelected = cardListEvents.cardSelected
+        
+        super.init()
     }
     
 }
