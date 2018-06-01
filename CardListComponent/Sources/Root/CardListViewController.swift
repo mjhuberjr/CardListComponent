@@ -34,6 +34,7 @@ class CardListViewController: UIViewController {
         
         setupCollectionView()
         setupInteractor()
+        configureCollectionView()
     }
     
 }
@@ -43,11 +44,7 @@ class CardListViewController: UIViewController {
 private extension CardListViewController {
     
     func setupCollectionView() {
-        let dataSource = presenter.dataSource
-        let cardListSections = CardListSections(dataSource: dataSource)
-        let collectionDataSource = CardListCollectionViewDataSource(presenter: presenter, cardListSections: cardListSections)
-        let collectionDelegate = CardListCollectionViewDelegate(interactor: interactor, cardListConfiguration: presenter.configuration)
-        collectionViewController = CardListCollectionView(dataSource: collectionDataSource, delegate: collectionDelegate)
+        collectionViewController = CardListCollectionView()
         let padding = presenter.configuration.padding
         embed(collectionViewController, with: padding)
     }
@@ -56,6 +53,14 @@ private extension CardListViewController {
         guard let collectionView = collectionViewController.collectionView else { fatalError("No collectionView set, something is seriously wrong") }
         let interactor = CardListInteractor(presenter: presenter, collectionView: collectionView)
         self.interactor = interactor
+    }
+    
+    func configureCollectionView() {
+        let dataSource = presenter.dataSource
+        let cardListSections = CardListSections(dataSource: dataSource)
+        let collectionDataSource = CardListCollectionViewDataSource(presenter: presenter, cardListSections: cardListSections)
+        let collectionDelegate = CardListCollectionViewDelegate(interactor: interactor, cardListConfiguration: presenter.configuration)
+        collectionViewController.provide(dataSource: collectionDataSource, delegate: collectionDelegate)
     }
     
 }
