@@ -32,7 +32,7 @@ public class CardListComponentCoordinator: CardListComponentCoordination {
         return nil
     }
     
-    public init(dataSource: CardListDataSource?, dataFormattable: CardListDataFormattable? = nil, cardListConfigurable: CardListConfigurable? = nil, cardListEvents: CardListEvents? = nil) {
+    public init(dataSource: CardListDataSource?, dataFormattable: CardListDataFormattable? = nil, cardListConfigurable: CardListConfigurable? = nil) {
         let dataFormatter = dataFormattable ?? CardListFormattableImpl()
         let cardListConfiguration = cardListConfigurable ?? CardListConfigurableImpl()
         let dataSource = dataSource ?? PrototypeData()
