@@ -7,15 +7,29 @@
 //
 
 import Foundation
+import UIKit
 
 class CardListCollectionViewDelegate: NSObject, CardListEvents {
     
+    var interactor: CardListInteraction
+    var cardSelected: CardListEventClosure?
+    
+    init(interactor: CardListInteraction, cardListConfiguration: CardListConfigurable) {
+        self.interactor = interactor
+        
+        let cardListEvents = cardListConfiguration.cardListEvents
+        self.cardSelected = cardListEvents.cardSelected
+    }
     
 }
 
 extension CardListCollectionViewDelegate: UICollectionViewDelegate {
     
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = collectionView.cellForItem(at: indexPath) as! CardCell
+        let identifier = item.identifier
+        cardSelected?(identifier)
+    }
     
 }
 

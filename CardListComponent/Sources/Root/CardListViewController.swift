@@ -46,7 +46,7 @@ private extension CardListViewController {
         let dataSource = presenter.dataSource
         let cardListSections = CardListSections(dataSource: dataSource)
         let collectionDataSource = CardListCollectionViewDataSource(presenter: presenter, cardListSections: cardListSections)
-        let collectionDelegate = CardListCollectionViewDelegate()
+        let collectionDelegate = CardListCollectionViewDelegate(interactor: interactor, cardListConfiguration: presenter.configuration)
         collectionViewController = CardListCollectionView(dataSource: collectionDataSource, delegate: collectionDelegate)
         let padding = presenter.configuration.padding
         embed(collectionViewController, with: padding)

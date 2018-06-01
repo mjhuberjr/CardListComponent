@@ -16,6 +16,8 @@ class CardCell: UICollectionViewCell {
     @IBOutlet var thumbnail: UIImageView!
     @IBOutlet var content: UIView!
     
+    var identifier: String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
@@ -29,6 +31,8 @@ class CardCell: UICollectionViewCell {
     }
     
     func configure(_ data: CardListDataObject) {
+        identifier = data.id
+        
         titleLabel.text = data.title
         subtitleLabel.text = data.subtitle
         descriptionLabel.text = data.description
