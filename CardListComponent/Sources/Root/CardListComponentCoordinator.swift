@@ -12,6 +12,9 @@ public protocol CardListComponentCoordination: class {
     
     func cardListComponentViewController() -> UIViewController
     
+    // MARK: - Interactions
+    func scrollTo(_ identifier: String)
+    
 }
 
 // MARK: - Default implementations if not passed in from consumer of CardListComponent
@@ -22,6 +25,12 @@ class CardListConfigurableImpl: CardListConfigurable { init() { } }
 public class CardListComponentCoordinator: CardListComponentCoordination {
     
     fileprivate let rootViewController: CardListViewController
+    fileprivate var interactor: CardListInteraction? {
+        if rootViewController.isViewLoaded {
+            return rootViewController.interactor
+        }
+        return nil
+    }
     
     public init(dataSource: CardListDataSource?, dataFormattable: CardListDataFormattable? = nil, cardListConfigurable: CardListConfigurable? = nil, cardListEvents: CardListEvents? = nil) {
         let dataFormatter = dataFormattable ?? CardListFormattableImpl()
@@ -33,6 +42,16 @@ public class CardListComponentCoordinator: CardListComponentCoordination {
     
     public func cardListComponentViewController() -> UIViewController {
         return rootViewController
+    }
+    
+}
+
+// MARK: - CardList Interactions
+
+extension CardListComponentCoordinator {
+    
+    public func scrollTo(_ identifier: String) {
+        interactor?.focus(on: identifier)
     }
     
 }
