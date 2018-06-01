@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol CardListEvents: class {
+public protocol CardListEvents {
     
     var cardSelected: CardListEventClosure? { get }
     
