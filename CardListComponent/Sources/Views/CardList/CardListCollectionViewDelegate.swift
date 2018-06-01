@@ -27,8 +27,9 @@ extension CardListCollectionViewDelegate: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = collectionView.cellForItem(at: indexPath) as! CardCell
-        let identifier = item.identifier
-        cardSelected?(identifier)
+        if let identifier = item.identifier {
+            cardSelected?(identifier)
+        }
     }
     
 }
