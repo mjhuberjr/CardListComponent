@@ -56,6 +56,9 @@ private extension CardListViewController {
     }
     
     func configureCollectionView() {
+        let configuration = presenter.configuration
+        collectionViewController.collectionView.isScrollEnabled = configuration.isScrollingEnabled
+        
         let dataSource = presenter.dataSource
         let cardListSections = CardListSections(dataSource: dataSource)
         let collectionDataSource = CardListCollectionViewDataSource(presenter: presenter, cardListSections: cardListSections)
