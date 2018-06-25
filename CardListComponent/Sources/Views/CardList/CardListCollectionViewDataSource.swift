@@ -34,7 +34,7 @@ extension CardListCollectionViewDataSource: UICollectionViewDataSource {
         switch cellInfo.cellType {
         case .card:
             guard let cardCell = cell as? CardCell else { return cell }
-            cardCell.configure(cellInfo.dataObject)
+            cardCell.provide(formatter: presenter.dataFormatter, data: cellInfo.dataObject)
             return cardCell
         }
     }
