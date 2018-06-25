@@ -14,6 +14,8 @@ public protocol CardListComponentCoordination: class {
     
     // MARK: - Interactions
     func scrollTo(_ identifier: String)
+    func disableScrolling()
+    func enableScrolling()
     
 }
 
@@ -52,6 +54,14 @@ extension CardListComponentCoordinator {
     
     public func scrollTo(_ identifier: String) {
         interactor?.focus(on: identifier)
+    }
+    
+    public func disableScrolling() {
+        interactor?.disableScrolling()
+    }
+    
+    public func enableScrolling() {
+        interactor?.enableScrolling()
     }
     
 }

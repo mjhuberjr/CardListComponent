@@ -6,11 +6,13 @@
 //  Copyright © 2018 operation thirteenOne. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CardListInteraction: class {
     
     func focus(on identifier: CardIdentifier)
+    func disableScrolling()
+    func enableScrolling()
     
 }
 
@@ -64,6 +66,14 @@ extension CardListInteractor: CardListInteraction {
         let indexPath = IndexPath(row: 0, section: 0)
         let direction = getDirection()
         collectionView.scrollToItem(at: indexPath, at: direction, animated: true)
+    }
+    
+    func disableScrolling() {
+        collectionView.isScrollEnabled = false
+    }
+    
+    func enableScrolling() {
+        collectionView.isScrollEnabled = true
     }
     
 }
