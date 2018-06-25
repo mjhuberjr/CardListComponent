@@ -21,6 +21,8 @@ class CardListCollectionViewDelegate: NSObject, CardListEvents {
         
         let cardListEvents = cardListConfiguration.cardListEvents
         self.cardSelected = cardListEvents.cardSelected
+        self.didScrollFromTop = cardListEvents.didScrollFromTop
+        self.didScrollToTop = cardListEvents.didScrollToTop
         
         super.init()
     }
