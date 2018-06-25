@@ -37,7 +37,7 @@ public class CardListComponentCoordinator: CardListComponentCoordination {
     public init(adapter: CardListComponentAdapter?, dataFormattable: CardListDataFormattable? = nil, cardListConfigurable: CardListConfigurable? = nil) {
         let dataFormatter = dataFormattable ?? CardListFormattableImpl()
         let cardListConfiguration = cardListConfigurable ?? CardListConfigurableImpl()
-        let dataSource = adapter?.getObjects() ?? PrototypeData()
+        let dataSource = adapter?.getCardListObjects() ?? PrototypeData()
         let presenter = CardListPresenter(dataSource: dataSource, dataFormatter: dataFormatter, configuration: cardListConfiguration)
         rootViewController = CardListViewController(presenter: presenter)
     }
