@@ -50,6 +50,7 @@ private extension CardCell {
     
     func setup() {
         thumbnail.layer.cornerRadius = 4.0
+        thumbnail.clipsToBounds = true
     }
     
 }

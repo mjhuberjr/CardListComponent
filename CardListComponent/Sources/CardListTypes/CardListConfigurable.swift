@@ -21,6 +21,7 @@ public protocol CardListConfigurable {
     var type: CardListDirection { get }
     var padding: UIEdgeInsets { get }
     var isScrollingEnabled: Bool { get }
+    var isTransparent: Bool { get }
     
 }
 
@@ -30,5 +31,6 @@ extension CardListConfigurable {
     var type: CardListDirection { return .vertical }
     var padding: UIEdgeInsets { return UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0) }
     var isScrollingEnabled: Bool { return false }
+    var isTransparent: Bool { return false }
     
 }
