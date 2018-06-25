@@ -49,9 +49,12 @@
                         <constraint firstItem="ZOk-NM-nhI" firstAttribute="top" secondItem="XER-8A-4uY" secondAttribute="bottom" constant="8" id="5LP-lx-d7v"/>
                         <constraint firstAttribute="trailing" secondItem="zDn-GD-1W8" secondAttribute="trailing" id="94K-sJ-4aW"/>
                         <constraint firstItem="zDn-GD-1W8" firstAttribute="top" secondItem="QiS-tp-kkk" secondAttribute="top" id="ENg-wI-Mcz"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZOk-NM-nhI" secondAttribute="trailing" constant="8" id="JXQ-KV-jaR"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XER-8A-4uY" secondAttribute="trailing" constant="8" id="M5N-ZQ-0qj"/>
                         <constraint firstItem="zDn-GD-1W8" firstAttribute="leading" secondItem="QiS-tp-kkk" secondAttribute="leading" id="O0z-7a-CXF"/>
                         <constraint firstItem="QjL-56-WZb" firstAttribute="leading" secondItem="QiS-tp-kkk" secondAttribute="leading" constant="8" id="PP6-0e-sQj"/>
                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZOk-NM-nhI" secondAttribute="bottom" constant="20" id="RWH-uG-Nl3"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QjL-56-WZb" secondAttribute="trailing" constant="8" id="S5S-ly-7Mx"/>
                         <constraint firstItem="XER-8A-4uY" firstAttribute="leading" secondItem="QjL-56-WZb" secondAttribute="leading" id="TVd-dh-QWk"/>
                         <constraint firstItem="XER-8A-4uY" firstAttribute="top" secondItem="QjL-56-WZb" secondAttribute="bottom" constant="8" id="WVt-yF-A3R"/>
                         <constraint firstItem="ZOk-NM-nhI" firstAttribute="leading" secondItem="XER-8A-4uY" secondAttribute="leading" id="fEO-sP-V8i"/>
