@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EEACD5320E14AAE0035748B /* CardListComponentAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEACD5220E14AAE0035748B /* CardListComponentAdapter.swift */; };
 		5EF61E2520AA7F8300E0371E /* CardListComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF61E2320AA7F8300E0371E /* CardListComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EF61E2E20AA80D400E0371E /* CardListClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E2D20AA80D400E0371E /* CardListClosures.swift */; };
 		5EF61E3020AA812700E0371E /* CardListInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61E2F20AA812700E0371E /* CardListInteraction.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EEACD5220E14AAE0035748B /* CardListComponentAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListComponentAdapter.swift; sourceTree = "<group>"; };
 		5EF61E2020AA7F8300E0371E /* CardListComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardListComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF61E2320AA7F8300E0371E /* CardListComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardListComponent.h; sourceTree = "<group>"; };
 		5EF61E2420AA7F8300E0371E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5EF61E2D20AA80D400E0371E /* CardListClosures.swift */,
+				5EEACD5220E14AAE0035748B /* CardListComponentAdapter.swift */,
 				5EF61E2F20AA812700E0371E /* CardListInteraction.swift */,
 				5EF61E3120AA813300E0371E /* CardListEvents.swift */,
 				5EF61E3320AA81CD00E0371E /* CardListDataSource.swift */,
@@ -274,6 +277,7 @@
 				5EF61E5520B23F0800E0371E /* UIViewController+Embed.swift in Sources */,
 				5EF61E3620AA81E800E0371E /* CardListConfigurable.swift in Sources */,
 				5EF61E4F20B2254D00E0371E /* CardListCollectionViewDelegate.swift in Sources */,
+				5EEACD5320E14AAE0035748B /* CardListComponentAdapter.swift in Sources */,
 				5EF61E7D20B3A3BA00E0371E /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
