@@ -10,6 +10,6 @@ import Foundation
 
 public protocol CardListComponentAdapter {
     
-    func getObjects() -> CardListDataSource
+    func getCardListObjects() -> CardListDataSource
     
 }
