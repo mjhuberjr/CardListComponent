@@ -41,6 +41,12 @@ class CardListCollectionView: UIViewController {
         registerCells()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        roundTopCorners(view: view)
+    }
+    
 }
 
 // MARK: - Private methods
@@ -52,6 +58,16 @@ private extension CardListCollectionView {
         
         collectionView.dataSource = dataSource
         collectionView.delegate = delegate
+    }
+    
+    func roundTopCorners(view: UIView) {
+        let maskPath1 = UIBezierPath(roundedRect: view.bounds,
+                                     byRoundingCorners: [.topLeft , .topRight],
+                                     cornerRadii: CGSize(width: 8, height: 8))
+        let maskLayer1 = CAShapeLayer()
+        maskLayer1.frame = view.bounds
+        maskLayer1.path = maskPath1.cgPath
+        view.layer.mask = maskLayer1
     }
     
     func registerCells() {
