@@ -34,10 +34,10 @@ public class CardListComponentCoordinator: CardListComponentCoordination {
         return nil
     }
     
-    public init(dataSource: CardListDataSource?, dataFormattable: CardListDataFormattable? = nil, cardListConfigurable: CardListConfigurable? = nil) {
+    public init(adapter: CardListComponentAdapter?, dataFormattable: CardListDataFormattable? = nil, cardListConfigurable: CardListConfigurable? = nil) {
         let dataFormatter = dataFormattable ?? CardListFormattableImpl()
         let cardListConfiguration = cardListConfigurable ?? CardListConfigurableImpl()
-        let dataSource = dataSource ?? PrototypeData()
+        let dataSource = adapter?.getObjects() ?? PrototypeData()
         let presenter = CardListPresenter(dataSource: dataSource, dataFormatter: dataFormatter, configuration: cardListConfiguration)
         rootViewController = CardListViewController(presenter: presenter)
     }
