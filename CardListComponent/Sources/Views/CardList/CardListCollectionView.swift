@@ -23,7 +23,7 @@ class CardListCollectionView: UIViewController {
         self.dataSource = dataSource
         self.delegate = delegate
         
-        setupCollectionView()
+        setupCollectionView(with: false)
     }
     
     @available(*, unavailable)
@@ -47,8 +47,8 @@ class CardListCollectionView: UIViewController {
 
 private extension CardListCollectionView {
     
-    func setupCollectionView() {
-        collectionView.backgroundColor = .clear
+    func setupCollectionView(with transparency: Bool) {
+        collectionView.backgroundColor = transparency ? .clear : .white
         
         collectionView.dataSource = dataSource
         collectionView.delegate = delegate
