@@ -13,6 +13,8 @@ class CardListCollectionViewDelegate: NSObject, CardListEvents {
     
     var interactor: CardListInteraction
     var cardSelected: CardListEventClosure?
+    var didScrollFromTop: CardListScrollEventClosure?
+    var didScrollToTop: CardListScrollEventClosure?
     
     init(interactor: CardListInteraction, cardListConfiguration: CardListConfigurable) {
         self.interactor = interactor
@@ -32,6 +34,11 @@ extension CardListCollectionViewDelegate: UICollectionViewDelegate {
         if let identifier = item.identifier {
             cardSelected?(identifier)
         }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offset = scrollView.contentOffset
+        offset.y <= 0 ? didScrollToTop?() : didScrollFromTop?()
     }
     
 }

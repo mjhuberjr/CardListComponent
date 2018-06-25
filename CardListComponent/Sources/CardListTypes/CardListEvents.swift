@@ -11,11 +11,15 @@ import Foundation
 public protocol CardListEvents {
     
     var cardSelected: CardListEventClosure? { get }
+    var didScrollFromTop: CardListScrollEventClosure? { get }
+    var didScrollToTop: CardListScrollEventClosure? { get }
     
 }
 
 extension CardListEvents {
     
     var cardSelected: CardListEventClosure? { return nil }
+    var didScrollFromTop: CardListScrollEventClosure? { return nil }
+    var didScrollToTop: CardListScrollEventClosure? { return nil }
     
 }
