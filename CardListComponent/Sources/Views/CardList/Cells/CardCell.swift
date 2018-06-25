@@ -30,10 +30,10 @@ class CardCell: UICollectionViewCell {
         thumbnail.image = nil
     }
     
-    func configure(_ data: CardListDataObject) {
+    func provide(formatter: CardListDataFormattable, data: CardListDataObject) {
         identifier = data.id
         
-        titleLabel.text = data.title
+        titleLabel.text = formatter.formatTitle(for: data)
         subtitleLabel.text = data.subtitle
         descriptionLabel.text = data.description
         
